@@ -10,17 +10,28 @@ function Uploader({ setImage }: UploaderProps) {
 
   const imageRef = useRef<HTMLInputElement>(null);
   const handleImage = (e: ChangeEvent<HTMLInputElement>) => {
-
+    const image = e.target.value;
+    console.log(`image = `, image);
   };
 
 
   return (
     <div className={css.uploader}>
       <label></label>
-      <input ref={imageRef} type="file" className={css.fileHandler} />
-      <img src={addImg} className={css.addImg} onClick={() => {
-        imageRef.current?.click();
-      }} />
+      <input
+        ref={imageRef}
+        type="image"
+        className={css.fileHandler}
+        onChange={handleImage}
+      />
+      <img
+        src={addImg}
+        className={css.addImg}
+        onClick={() => {
+          console.log(`imageRef.current -- `, imageRef.current);
+          imageRef.current?.click();
+        }}
+      />
     </div>
   );
 }
