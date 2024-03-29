@@ -1,15 +1,15 @@
 
 import { useState } from 'react';
-import './app.scss';
 import Editor from './components/editor';
 import Uploader from './components/uploader';
+import css from './app.module.scss';
 
 function App() {
 
   const [uploadedImage, setUploadedImage] = useState<string>('');
 
   return (
-    <div className="app">
+    <div className={css.app}>
       {uploadedImage ? (
         <Editor image={uploadedImage} />
       ) : (
