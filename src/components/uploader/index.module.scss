@@ -1,10 +1,23 @@
 
-.fileHandler {
-  display: none;
-}
+.uploader {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
 
-.addImg {
-  width: 5rem;
-  height: 5rem;
-  cursor: pointer;
+  .imageContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .fileHandler {
+    display: none;
+  }
+  
+  .addImg {
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+  }
 }
