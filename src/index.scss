@@ -21,10 +21,10 @@ html, body {
   border-radius: 335.383px 406px 323.168px 384.988px;
   bottom: 0;
   display: block;
-  height: 30vw;
+  height: 50vw;
   margin: 50px auto;
   transition: background-color 2s ease-out;
-  width: 30vw;
+  width: 50vw;
 }
 
 @-webkit-keyframes rotating /* Safari and Chrome */ {
@@ -124,4 +124,11 @@ html, body {
     0% {transform: translateX(0);}
     50% {transform: translateX(-25%);}
     100% {transform: translateX(-70%);}
+}
+
+@media screen and (min-width: 768px) {
+  .bubble-circle  {
+    width: 30vw;
+    height: 30vw;
+  }
 }
