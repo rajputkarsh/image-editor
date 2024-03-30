@@ -1,11 +1,9 @@
-
 import { useState } from 'react';
 import Editor from './components/editor';
 import Uploader from './components/uploader';
 import css from './app.module.scss';
 
 function App() {
-
   const [uploadedImage, setUploadedImage] = useState<File | null>();
 
   return (
@@ -19,4 +17,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

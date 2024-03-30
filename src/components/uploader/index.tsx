@@ -16,7 +16,7 @@ function Uploader({ setImage }: UploaderProps) {
 
   const renderBubbles = () => {
     const data = [];
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 3; i++) {
       data.push(
         <div className={css.imageContainer} key={crypto.randomUUID()}>
           <Bubble />
@@ -30,6 +30,7 @@ function Uploader({ setImage }: UploaderProps) {
   return (
     <div className={css.uploader}>
       {renderBubbles()}
+      <h1 className={`${css.title}`}>Image Optimizer</h1>
       <div className={css.imageContainer}>
         <input
           ref={imageRef}

@@ -4,6 +4,14 @@
   height: 100vh;
   position: relative;
 
+  .title {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    color: #e3405f;
+  }
+
   .imageContainer {
     position: absolute;
     top: 50%;
