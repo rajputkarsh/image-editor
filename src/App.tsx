@@ -6,7 +6,7 @@ import css from './app.module.scss';
 
 function App() {
 
-  const [uploadedImage, setUploadedImage] = useState<string>('');
+  const [uploadedImage, setUploadedImage] = useState<File | null>();
 
   return (
     <div className={css.app}>

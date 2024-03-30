@@ -3,15 +3,15 @@ import addImg from '../../assets/add.svg';
 import css from './index.module.scss';
 
 interface UploaderProps {
-  setImage: Dispatch<string>;
+  setImage: Dispatch<File>;
 }
 
 function Uploader({ setImage }: UploaderProps) {
 
   const imageRef = useRef<HTMLInputElement>(null);
   const handleImage = (e: ChangeEvent<HTMLInputElement>) => {
-    const image = e.target.value;
-    console.log(`image = `, image);
+    const image = e.target.files?.[0];
+    image && setImage(image);
   };
 
 
@@ -20,7 +20,8 @@ function Uploader({ setImage }: UploaderProps) {
       <label></label>
       <input
         ref={imageRef}
-        type="image"
+        type="file"
+        accept="image/*"
         className={css.fileHandler}
         onChange={handleImage}
       />
@@ -28,7 +29,6 @@ function Uploader({ setImage }: UploaderProps) {
         src={addImg}
         className={css.addImg}
         onClick={() => {
-          console.log(`imageRef.current -- `, imageRef.current);
           imageRef.current?.click();
         }}
       />

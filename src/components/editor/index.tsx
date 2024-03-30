@@ -1,6 +1,6 @@
 
 interface EditorProps {
-  image: string;
+  image: File;
 }
 
 function Editor({image}: EditorProps) {
