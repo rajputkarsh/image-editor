@@ -2,6 +2,7 @@ import { ChangeEvent, Dispatch, useRef } from 'react';
 import addImg from '../../assets/add.svg';
 import css from './index.module.scss';
 import Bubble from '../bubble';
+import Waves from '../waves';
 
 interface UploaderProps {
   setImage: Dispatch<File>;
@@ -47,6 +48,7 @@ function Uploader({ setImage }: UploaderProps) {
           }}
         />
       </div>
+      <Waves />
     </div>
   );
 }
