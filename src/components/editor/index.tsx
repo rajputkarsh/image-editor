@@ -10,7 +10,7 @@ function Editor({ image }: EditorProps) {
   const [editedImage, setEditedImage] = useState<string>(image);
   return (
     <div className={css.editorRoot}>
-      <ReactCompareImage leftImage={image} rightImage={editedImage} />;
+      <ReactCompareImage leftImage={image} rightImage={editedImage} />
     </div>
   );
 }
