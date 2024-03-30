@@ -21,7 +21,7 @@ function Bubble() {
               Math.round(Math.random() * 800 + 350) + 'px'
             ),
           },
-          50000
+          500000
         );
     };
 

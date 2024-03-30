@@ -14,7 +14,7 @@ import Waves from '../waves';
 import { delay } from '../../utils';
 
 interface UploaderProps {
-  setImage: Dispatch<File>;
+  setImage: Dispatch<string>;
 }
 
 function Uploader({ setImage }: UploaderProps) {
@@ -22,7 +22,15 @@ function Uploader({ setImage }: UploaderProps) {
   const [bubbleElements, setBubbleElements] = useState<Array<ReactNode>>([]);
   const handleImage = (e: ChangeEvent<HTMLInputElement>) => {
     const image = e.target.files?.[0];
-    image && setImage(image);
+
+    const reader = new FileReader();
+    reader.onload = function () {
+      const base64String = (reader.result || '') as string;
+      setImage(base64String);
+    };
+    if (image) {
+      reader.readAsDataURL(image);
+    }
   };
 
   const renderBubbles = async () => {
