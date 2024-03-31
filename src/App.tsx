@@ -4,7 +4,7 @@ import Uploader from './components/uploader';
 import css from './app.module.scss';
 
 function App() {
-  const [uploadedImage, setUploadedImage] = useState<File | null>();
+  const [uploadedImage, setUploadedImage] = useState<string | null>();
 
   return (
     <div className={css.app}>
