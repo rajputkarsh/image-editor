@@ -1,0 +1,38 @@
+.customizationRoot {
+  position: absolute;
+  bottom: 5rem;
+  background-color: #000;
+  max-height: 20rem;
+  width: 15rem;
+  .title {
+    width: 100%;
+    padding: 0.8rem;
+    height: fit-content;
+    font-size: large;
+    font-weight: 600;
+  }
+}
+
+.left {
+  left: 0rem;
+  border-radius: 0rem 1rem 1rem 0rem;
+
+  .title:first-child {
+    border-radius: 0rem 1rem 1rem 0rem;
+  }
+
+  .title {
+    background-color: #ff3385;
+  }
+}
+
+.right {
+  right: 0rem;
+  border-radius: 1rem 0rem 0rem 1rem;
+  .title:first-child {
+    border-radius: 1rem 0rem 0rem 1rem;
+  }
+  .title {
+    background-color: #5fb4e4;
+  }
+}

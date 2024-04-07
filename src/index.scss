@@ -16,7 +16,7 @@ html, body {
 
 .bubble-circle {
   animation: rotating 15s linear infinite;
-  opacity: 0.5;
+  opacity: 0.2;
   background: #e3405f;
   border-radius: 335.383px 406px 323.168px 384.988px;
   bottom: 0;
@@ -24,7 +24,7 @@ html, body {
   height: 50vw;
   margin: 50px auto;
   transition: background-color 2s ease-out;
-  width: 50vw;
+  width: 40vw;
 }
 
 @-webkit-keyframes rotating /* Safari and Chrome */ {
